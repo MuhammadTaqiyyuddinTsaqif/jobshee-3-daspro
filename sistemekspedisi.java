@@ -13,6 +13,8 @@ public class sistemekspedisi {
         alamat_pengirim =sc.nextLine();
         System.out.print("input no pengirim : ");
         no_hp_pengirim =sc.nextLine();
+        System.out.print("input asal pengiriman : ");
+        asal_pengiriman =sc.nextLine();
         System.out.print("input nama penerima : ");
         nama_penerima =sc.nextLine();
         System.out.print("input alamat penerima : ");
