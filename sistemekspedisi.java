@@ -36,7 +36,7 @@ public class sistemekspedisi {
                 System.out.println("Insurance will be processed immediately");
                 break;
             default:
-                System.out.println(input + "anda tidak menggunakan asuransi" );
+                System.out.println(input + " anda tidak menggunakan asuransi" );
         }
 
 
