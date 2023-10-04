@@ -4,7 +4,7 @@ public class sistemekspedisi {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
-        String nama_penerima, alamat_penerima, no_telp_penerima, nama_pengirim, alamat_pengirim, no_telp_pengirim, asal_kota_pengiriman, kota_tujuan_pengiriman;
+        String nama_penerima, alamat_penerima, no_telp_penerima, nama_pengirim, alamat_pengirim, no_telp_pengirim, asal_kota_pengiriman, kota_tujuan_pengiriman, input;
         double harga, panjang, berat, tinggi, lebar, jarak;
         
         System.out.print("input nama pengirim : ");
@@ -24,23 +24,19 @@ public class sistemekspedisi {
         System.out.print("input kota tujuan pengiriman : ");
         kota_tujuan_pengiriman = sc.nextLine();
 
-        String input;
-
-        Scanner scan = new Scanner(System.in);
-
-        System.out.println("Do you need insurance?");
-        input = scan.next();
+        System.out.print("Do you need insurance?");
+        input = sc.next();
 
         switch(input){
             case "Yes":
                 System.out.println("Insurance will be processed immediately");
                 break;
             default:
-                System.out.println("You don't use insurance");
+                System.out.print("You don't use insurance");
         }
 
         System.out.println("Do you have a member card?");
-        input = scan.next();
+        input = sc.next();
 
         switch(input){
             case "Yes":
