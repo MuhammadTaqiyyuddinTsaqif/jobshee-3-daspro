@@ -7,7 +7,24 @@ public class sistemekspedisi {
         Scanner sc = new Scanner(System.in);
         
         String nama_penerima, alamat_penerima, no_telp_penerima, nama_pengirim, alamat_pengirim, no_telp_pengirim, asal_kota_pengiriman, kota_tujuan_pengiriman, input;
-        double harga, panjang, berat, tinggi, lebar, jarak;
+        double harga, panjang, berat, tinggi, lebar, jarak ,zonasi;
+        
+         System.out.println("               _                          ");
+        System.out.println(" __      _____| | ___ ___  _ __ ___   ___ ");
+        System.out.println(" \\ \\ /\\ / / _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\");
+        System.out.println("  \\ V  V /  __/ | (_| (_) | | | | | |  __/");
+        System.out.println("   \\_/\\_/ \\___|_|\\___\\___/|_| |_| |_|\\___|");
+        System.out.println("                                          ");
+
+        System.out.println("                _                              _ _     _ ");
+        System.out.println("               | |                            | (_)   (_)");
+        System.out.println("  _ ____      _| |_    _____  ___ __   ___  __| |_ ___ _ ");
+        System.out.println(" | '__\\ \\ /\\ / / __|  / _ \\ \\/ / '_ \\ / _ \\/ _` | / __| |");
+        System.out.println(" | |   \\ V  V /| |_  |  __/>  <| |_) |  __/ (_| | \\__ \\ |");
+        System.out.println(" |_|    \\_/\\_/  \\__|  \\___/_/\\_\\ .__/ \\___|\\__,_|_|___/_");
+        System.out.println("                               | |                       ");
+        System.out.println("                               |_|                       ");
+        
         
         System.out.print("input nama pengirim : ");
         nama_penerima = sc.nextLine();
@@ -25,7 +42,9 @@ public class sistemekspedisi {
         no_telp_penerima = sc.nextLine();
         System.out.print("input kota tujuan pengiriman : ");
         kota_tujuan_pengiriman = sc.nextLine();
+        
 
+        //if
         System.out.print("Do you need insurance?");
         input = sc.next();
 
