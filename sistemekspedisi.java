@@ -1,5 +1,7 @@
+import java.time.DayOfWeek;
+import java.time.LocalDate;
 import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
+import java.time.Month;
 import java.util.Scanner;
 
 public class sistemekspedisi {
@@ -8,6 +10,7 @@ public class sistemekspedisi {
         
         String nama_penerima, alamat_penerima, no_telp_penerima, nama_pengirim, alamat_pengirim, no_telp_pengirim, asal_kota_pengiriman, kota_tujuan_pengiriman, input;
         double harga, panjang, berat, tinggi, lebar, jarak;
+        boolean asuransi , member, cod, reguler, expres;
         
         System.out.print("input nama pengirim : ");
         nama_penerima = sc.nextLine();
@@ -53,12 +56,26 @@ public class sistemekspedisi {
                 System.out.println("You do not get a discount on shipping costs");
                 LocalTime currentTime = LocalTime.now();
 
-        // Define a custom time format
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+        // Get the current date
+        LocalDate currentDate = LocalDate.now();
+        System.out.println("Current Date: " + currentDate);
 
-        // Format and print the current time
-        String formattedTime = currentTime.format(formatter);
-        System.out.println("Formatted current time: " + formattedTime);
+        // Get the current time
+        //LocalTime currentTime = LocalTime.now();
+        System.out.println("Current Time: " + currentTime);
+
+        // Get the current day of the week
+        DayOfWeek currentDayOfWeek = currentDate.getDayOfWeek();
+        System.out.println("Day of the Week: " + currentDayOfWeek);
+
+        // Get the current month
+        Month currentMonth = currentDate.getMonth();
+        System.out.println("Month: " + currentMonth);
+
+        // Get the current year
+        int currentYear = currentDate.getYear();
+        System.out.println("Year: " + currentYear);
+    
         }
 
 }
