@@ -1,3 +1,5 @@
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class sistemekspedisi {
@@ -49,6 +51,15 @@ public class sistemekspedisi {
                 break;
             default:
                 System.out.println("You do not get a discount on shipping costs");
+                LocalTime currentTime = LocalTime.now();
+
+        // Define a custom time format
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+
+        // Format and print the current time
+        String formattedTime = currentTime.format(formatter);
+        System.out.println("Formatted current time: " + formattedTime);
         }
+
 }
 }
