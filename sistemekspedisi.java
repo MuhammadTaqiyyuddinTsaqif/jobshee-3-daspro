@@ -1,5 +1,3 @@
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class sistemekspedisi {
@@ -7,24 +5,7 @@ public class sistemekspedisi {
         Scanner sc = new Scanner(System.in);
         
         String nama_penerima, alamat_penerima, no_telp_penerima, nama_pengirim, alamat_pengirim, no_telp_pengirim, asal_kota_pengiriman, kota_tujuan_pengiriman, input;
-        double harga, panjang, berat, tinggi, lebar, jarak ,zonasi;
-        
-         System.out.println("               _                          ");
-        System.out.println(" __      _____| | ___ ___  _ __ ___   ___ ");
-        System.out.println(" \\ \\ /\\ / / _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\");
-        System.out.println("  \\ V  V /  __/ | (_| (_) | | | | | |  __/");
-        System.out.println("   \\_/\\_/ \\___|_|\\___\\___/|_| |_| |_|\\___|");
-        System.out.println("                                          ");
-
-        System.out.println("                _                              _ _     _ ");
-        System.out.println("               | |                            | (_)   (_)");
-        System.out.println("  _ ____      _| |_    _____  ___ __   ___  __| |_ ___ _ ");
-        System.out.println(" | '__\\ \\ /\\ / / __|  / _ \\ \\/ / '_ \\ / _ \\/ _` | / __| |");
-        System.out.println(" | |   \\ V  V /| |_  |  __/>  <| |_) |  __/ (_| | \\__ \\ |");
-        System.out.println(" |_|    \\_/\\_/  \\__|  \\___/_/\\_\\ .__/ \\___|\\__,_|_|___/_");
-        System.out.println("                               | |                       ");
-        System.out.println("                               |_|                       ");
-        
+        double harga, panjang, berat, tinggi, lebar, jarak;
         
         System.out.print("input nama pengirim : ");
         nama_penerima = sc.nextLine();
@@ -40,45 +21,89 @@ public class sistemekspedisi {
         alamat_penerima = sc.nextLine();
         System.out.print("input no telp penerima : ");
         no_telp_penerima = sc.nextLine();
-        System.out.print("input kota tujuan pengiriman : ");
+        System.out.print("kota tujuan pengiriman : ");
         kota_tujuan_pengiriman = sc.nextLine();
-        
 
-        //if
         System.out.print("Do you need insurance?");
         input = sc.next();
 
         switch(input){
-            case "Yes":
+            case "yes":
                 System.out.println("Insurance will be processed immediately");
                 break;
-            default:
-
-
-                System.out.println(input + " anda tidak menggunakan asuransi" );
-
+            case "no":
                 System.out.println("You don't use insurance");
-                System.out.print("You don't use insurance");
+                break;
+            default:
+                System.out.println("You don't use insurance");
         }
 
         System.out.println("Do you have a member card?");
         input = sc.next();
 
-        switch(input){
+<<<<<<< HEAD
+    /*  switch(input){
             case "Yes":
+=======
+        switch(input){
+            case "yes":
+>>>>>>> a7989714fb9446bf5d6b5280a68ad3345d4173a7
                 System.out.println("You get a shipping fee discount of 10.000");
                 break;
+            case "no":
+                System.out.println("You don't use insurance");
             default:
                 System.out.println("You do not get a discount on shipping costs");
-                LocalTime currentTime = LocalTime.now();
+            /*  LocalTime currentTime = LocalTime.now();
+
+<<<<<<< HEAD
+        int total, diskon, bayar;
+        String ongkos_kirim;
+                System.out.print("apakah ongkos kirim mencapai 100 ribu (y atau t) ? ");
+                ongkos_kirim = sc.nextLine();
+                System.out.print("berapa total ongkos kirim pelanggan? ribu ");
+                total = sc.nextInt();
+                if (ongkos_kirim.equals("y")) {
+                    if (total > 100000) {
+                        diskon = 20000;
+                    } else {
+                        diskon = 15000;
+                    }
+                } else {
+                    if (total > 50000) {
+                        diskon = 10000;
+                    } else {
+                        diskon = 0;
+                    }
+                }
+                bayar = total - diskon;
+                System.out.println("total yang harus dibayar: ribu" + bayar);
+
 
         // Define a custom time format
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+=======
+        // Get the current date
+        LocalDate currentDate = LocalDate.now();
+        System.out.println("Current Date: " + currentDate);
+>>>>>>> 59015d420d80988e1cd51d229f2422280689506e
 
-        // Format and print the current time
-        String formattedTime = currentTime.format(formatter);
-        System.out.println("Formatted current time: " + formattedTime);
+        // Get the current time
+        //LocalTime currentTime = LocalTime.now();
+        System.out.println("Current Time: " + currentTime);
+
+        // Get the current day of the week
+        DayOfWeek currentDayOfWeek = currentDate.getDayOfWeek();
+        System.out.println("Day of the Week: " + currentDayOfWeek);
+
+        // Get the current month
+        Month currentMonth = currentDate.getMonth();
+        System.out.println("Month: " + currentMonth);
+
+        // Get the current year
+        int currentYear = currentDate.getYear();
+        System.out.println("Year: " + currentYear); */
+    
         }
 
-}
 }
