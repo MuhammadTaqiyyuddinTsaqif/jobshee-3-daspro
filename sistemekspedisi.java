@@ -26,32 +26,55 @@ public class sistemekspedisi {
         System.out.print("input kota tujuan pengiriman : ");
         kota_tujuan_pengiriman = sc.nextLine();
 
-        System.out.print("Do you need insurance?");
+        System.out.println("Do you need insurance?");
         input = sc.next();
 
         switch(input){
-            case "Yes":
+            case "yes":
                 System.out.println("Insurance will be processed immediately");
                 break;
-            default:
-
-
-                System.out.println(input + " anda tidak menggunakan asuransi" );
-
+            case "no":
                 System.out.println("You don't use insurance");
-                System.out.print("You don't use insurance");
+                break;
+            default:
+                System.out.println("You don't use insurance");
         }
 
         System.out.println("Do you have a member card?");
         input = sc.next();
 
         switch(input){
-            case "Yes":
+            case "yes":
                 System.out.println("You get a shipping fee discount of 10.000");
                 break;
+            case "no":
+                System.out.println("You don't use insurance");
             default:
                 System.out.println("You do not get a discount on shipping costs");
                 LocalTime currentTime = LocalTime.now();
+
+        int total, diskon, bayar;
+        String ongkos_kirim;
+                System.out.print("apakah ongkos kirim mencapai 100 ribu (y atau t) ? ");
+                ongkos_kirim = sc.nextLine();
+                System.out.print("berapa total ongkos kirim pelanggan? ribu ");
+                total = sc.nextInt();
+                if (ongkos_kirim.equals("y")) {
+                    if (total > 100000) {
+                        diskon = 20000;
+                    } else {
+                        diskon = 15000;
+                    }
+                } else {
+                    if (total > 50000) {
+                        diskon = 10000;
+                    } else {
+                        diskon = 0;
+                    }
+                }
+                bayar = total - diskon;
+                System.out.println("total yang harus dibayar: ribu" + bayar);
+
 
         // Define a custom time format
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
