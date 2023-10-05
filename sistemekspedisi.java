@@ -1,3 +1,7 @@
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.Month;
 import java.util.Scanner;
 
 public class sistemekspedisi {
@@ -6,6 +10,10 @@ public class sistemekspedisi {
         
         String nama_penerima, alamat_penerima, no_telp_penerima, nama_pengirim, alamat_pengirim, no_telp_pengirim, asal_kota_pengiriman, kota_tujuan_pengiriman, input;
         double harga, panjang, berat, tinggi, lebar, jarak;
+<<<<<<< HEAD
+=======
+        boolean asuransi , member, cod, reguler, expres;
+>>>>>>> f284f3b096c53c1e7720dcec275639a6ec91dcb8
         
         System.out.print("input nama pengirim : ");
         nama_penerima = sc.nextLine();
@@ -21,18 +29,19 @@ public class sistemekspedisi {
         alamat_penerima = sc.nextLine();
         System.out.print("input no telp penerima : ");
         no_telp_penerima = sc.nextLine();
-        System.out.print("kota tujuan pengiriman : ");
+        System.out.print("input kota tujuan pengiriman : ");
         kota_tujuan_pengiriman = sc.nextLine();
 
+<<<<<<< HEAD
         System.out.print("Do you need insurance?");
+=======
+        System.out.println("Do you need insurance?");
+>>>>>>> f284f3b096c53c1e7720dcec275639a6ec91dcb8
         input = sc.next();
 
         switch(input){
             case "yes":
                 System.out.println("Insurance will be processed immediately");
-                break;
-            case "no":
-                System.out.println("You don't use insurance");
                 break;
             default:
                 System.out.println("You don't use insurance");
@@ -41,52 +50,17 @@ public class sistemekspedisi {
         System.out.println("Do you have a member card?");
         input = sc.next();
 
-<<<<<<< HEAD
-    /*  switch(input){
-            case "Yes":
-=======
         switch(input){
             case "yes":
->>>>>>> a7989714fb9446bf5d6b5280a68ad3345d4173a7
                 System.out.println("You get a shipping fee discount of 10.000");
                 break;
-            case "no":
-                System.out.println("You don't use insurance");
             default:
                 System.out.println("You do not get a discount on shipping costs");
-            /*  LocalTime currentTime = LocalTime.now();
+                LocalTime currentTime = LocalTime.now();
 
-<<<<<<< HEAD
-        int total, diskon, bayar;
-        String ongkos_kirim;
-                System.out.print("apakah ongkos kirim mencapai 100 ribu (y atau t) ? ");
-                ongkos_kirim = sc.nextLine();
-                System.out.print("berapa total ongkos kirim pelanggan? ribu ");
-                total = sc.nextInt();
-                if (ongkos_kirim.equals("y")) {
-                    if (total > 100000) {
-                        diskon = 20000;
-                    } else {
-                        diskon = 15000;
-                    }
-                } else {
-                    if (total > 50000) {
-                        diskon = 10000;
-                    } else {
-                        diskon = 0;
-                    }
-                }
-                bayar = total - diskon;
-                System.out.println("total yang harus dibayar: ribu" + bayar);
-
-
-        // Define a custom time format
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
-=======
         // Get the current date
         LocalDate currentDate = LocalDate.now();
         System.out.println("Current Date: " + currentDate);
->>>>>>> 59015d420d80988e1cd51d229f2422280689506e
 
         // Get the current time
         //LocalTime currentTime = LocalTime.now();
@@ -102,8 +76,9 @@ public class sistemekspedisi {
 
         // Get the current year
         int currentYear = currentDate.getYear();
-        System.out.println("Year: " + currentYear); */
+        System.out.println("Year: " + currentYear);
     
         }
 
+}
 }
