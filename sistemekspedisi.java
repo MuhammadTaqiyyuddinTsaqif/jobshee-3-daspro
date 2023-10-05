@@ -1,3 +1,7 @@
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.Month;
 import java.util.Scanner;
 
 public class sistemekspedisi {
@@ -5,8 +9,8 @@ public class sistemekspedisi {
         Scanner sc = new Scanner(System.in);
         
         String nama_penerima, alamat_penerima, no_telp_penerima, nama_pengirim, alamat_pengirim, no_telp_pengirim, asal_kota_pengiriman, kota_tujuan_pengiriman, input;
-        double harga, panjang, berat, tinggi, lebar, jarak, total, tarifper20km,harga2,harga3, nilai_barang;
-        boolean asuransi = true, member =true , cod = true ;
+        double harga, panjang, berat, tinggi, lebar, jarak;
+        boolean asuransi , member, cod, reguler, expres;
         
         System.out.print("input nama pengirim : ");
         nama_penerima = sc.nextLine();
@@ -24,35 +28,13 @@ public class sistemekspedisi {
         no_telp_penerima = sc.nextLine();
         System.out.print("input kota tujuan pengiriman : ");
         kota_tujuan_pengiriman = sc.nextLine();
-        System.out.println("nilai barang :");
-      //  nilai_barang = sc.nextLine();
-    
-        //about price
-        //if
-        tarifper20km= 15000;
-        harga = tarifper20km;
-        harga2 = harga*0.1 + (tarifper20km);
-        System.out.println( "harga" +harga);
-        
-        /*if (asuransi ) {
-            total = harga + (harga*0.02) + (nilai_barang * 0.01);
-        } else {
-            total = harga;
-        }*/
 
-<<<<<<< HEAD
-    /*  System.out.print("Do you need insurance?");
-=======
         System.out.println("Do you need insurance?");
->>>>>>> a7989714fb9446bf5d6b5280a68ad3345d4173a7
         input = sc.next();
 
         switch(input){
             case "yes":
                 System.out.println("Insurance will be processed immediately");
-                break;
-            case "no":
-                System.out.println("You don't use insurance");
                 break;
             default:
                 System.out.println("You don't use insurance");
@@ -61,23 +43,21 @@ public class sistemekspedisi {
         System.out.println("Do you have a member card?");
         input = sc.next();
 
-<<<<<<< HEAD
-    /*  switch(input){
-            case "Yes":
-=======
         switch(input){
             case "yes":
->>>>>>> a7989714fb9446bf5d6b5280a68ad3345d4173a7
                 System.out.println("You get a shipping fee discount of 10.000");
                 break;
-            case "no":
-                System.out.println("You don't use insurance");
             default:
                 System.out.println("You do not get a discount on shipping costs");
-            /*  LocalTime currentTime = LocalTime.now();
+                LocalTime currentTime = LocalTime.now();
 
-        // Define a custom time format
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+        // Get the current date
+        LocalDate currentDate = LocalDate.now();
+        System.out.println("Current Date: " + currentDate);
+
+        // Get the current time
+        //LocalTime currentTime = LocalTime.now();
+        System.out.println("Current Time: " + currentTime);
 
         // Get the current day of the week
         DayOfWeek currentDayOfWeek = currentDate.getDayOfWeek();
@@ -89,8 +69,9 @@ public class sistemekspedisi {
 
         // Get the current year
         int currentYear = currentDate.getYear();
-        System.out.println("Year: " + currentYear); */
+        System.out.println("Year: " + currentYear);
     
         }
 
+}
 }
