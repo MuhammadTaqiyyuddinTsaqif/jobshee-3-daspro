@@ -8,6 +8,13 @@
             "type": "java",
             "name": "sistemekspedisi",
             "request": "launch",
+            "mainClass": "projectahir.sistemekspedisi",
+            "projectName": "jobshee-3-daspro_249bdaff"
+        },
+        {
+            "type": "java",
+            "name": "sistemekspedisi",
+            "request": "launch",
             "mainClass": "sistemekspedisi",
             "projectName": "jobshee-3-daspro_249bdaff"
         },
