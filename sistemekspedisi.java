@@ -12,24 +12,29 @@ public class sistemekspedisi {
         double harga, panjang, berat, tinggi, lebar, jarak;
         boolean asuransi , member, cod, reguler, expres;
         
-        System.out.print("input nama pengirim : ");
+
+        System.out.println("======= WELCOME TO RUWET EXPEDITION =======");
+
+        System.out.print("input nama pengirim          : ");
         nama_penerima = sc.nextLine();
-        System.out.print("input alamat pengirim : ");
+        System.out.print("input alamat pengirim        : ");
         alamat_pengirim = sc.nextLine();
-        System.out.print("input no telp pengirim : ");
+        System.out.print("input no telp pengirim       : ");
         no_telp_pengirim = sc.nextLine();
-        System.out.print("input asal kota pengiriman : ");
+        System.out.print("input asal kota pengiriman   : ");
         asal_kota_pengiriman = sc.nextLine();
-        System.out.print("input nama penerima : ");
+        System.out.print("input nama penerima          : ");
         nama_penerima = sc.nextLine();
-        System.out.print("input alamat penerima : ");
+        System.out.print("input alamat penerima        : ");
         alamat_penerima = sc.nextLine();
-        System.out.print("input no telp penerima : ");
+        System.out.print("input no telp penerima       : ");
         no_telp_penerima = sc.nextLine();
         System.out.print("input kota tujuan pengiriman : ");
         kota_tujuan_pengiriman = sc.nextLine();
 
-        System.out.println("Do you need insurance?");
+        System.out.println("===========================================");
+
+        System.out.println("========= Do you need insurance? =========");
         input = sc.next();
 
         switch(input){
@@ -40,7 +45,9 @@ public class sistemekspedisi {
                 System.out.println("You don't use insurance");
         }
 
-        System.out.println("Do you have a member card?");
+        System.out.println("===========================================");
+
+        System.out.println("======= Do you have a member card? =======");
         input = sc.next();
 
         switch(input){
@@ -49,27 +56,30 @@ public class sistemekspedisi {
                 break;
             default:
                 System.out.println("You do not get a discount on shipping costs");
-                LocalTime currentTime = LocalTime.now();
+                
+        System.out.println("===========================================");
+        
+        LocalTime currentTime = LocalTime.now();
 
         // Get the current date
         LocalDate currentDate = LocalDate.now();
-        System.out.println("Current Date: " + currentDate);
+        System.out.println("Current Date    : " + currentDate);
 
         // Get the current time
         //LocalTime currentTime = LocalTime.now();
-        System.out.println("Current Time: " + currentTime);
+        System.out.println("Current Time    : " + currentTime);
 
         // Get the current day of the week
         DayOfWeek currentDayOfWeek = currentDate.getDayOfWeek();
-        System.out.println("Day of the Week: " + currentDayOfWeek);
+        System.out.println("Day of the Week : " + currentDayOfWeek);
 
         // Get the current month
         Month currentMonth = currentDate.getMonth();
-        System.out.println("Month: " + currentMonth);
+        System.out.println("Month           : " + currentMonth);
 
         // Get the current year
         int currentYear = currentDate.getYear();
-        System.out.println("Year: " + currentYear);
+        System.out.println("Year            : " + currentYear);
     
         }
 
