@@ -8,33 +8,37 @@ public class sistemekspedisi {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
-        String nama_penerima, alamat_penerima, no_telp_penerima, nama_pengirim, alamat_pengirim, no_telp_pengirim, asal_kota_pengiriman, kota_tujuan_pengiriman, input;
+        String nama_penerima, no_telp_penerima, alamat_penerima, nama_pengirim, no_telp_pengirim, alamat_pengirim, asal_kota_pengiriman, kota_tujuan_pengiriman, input;
         double harga, panjang, berat, tinggi, lebar, jarak;
         boolean asuransi , member, cod, reguler, expres;
-        
 
         System.out.println("======= WELCOME TO RUWET EXPEDITION =======");
 
-        System.out.print("input nama pengirim          : ");
+        System.out.print("Input the sender's name              : ");
         nama_penerima = sc.nextLine();
-        System.out.print("input alamat pengirim        : ");
+        System.out.print("Input sender addressc                : ");
         alamat_pengirim = sc.nextLine();
-        System.out.print("input no telp pengirim       : ");
+        System.out.print("Input the sender's telp number       : ");
         no_telp_pengirim = sc.nextLine();
-        System.out.print("input asal kota pengiriman   : ");
+        System.out.print("Input the sender's city of origin    : ");
         asal_kota_pengiriman = sc.nextLine();
-        System.out.print("input nama penerima          : ");
+        System.out.print("Input the recipient's name           : ");
         nama_penerima = sc.nextLine();
-        System.out.print("input alamat penerima        : ");
+        System.out.print("Input the recipient's address        : ");
         alamat_penerima = sc.nextLine();
-        System.out.print("input no telp penerima       : ");
+        System.out.print("Input the recipient's telp number    : ");
         no_telp_penerima = sc.nextLine();
-        System.out.print("input kota tujuan pengiriman : ");
+        System.out.print("Input the delivery destination city  : ");
         kota_tujuan_pengiriman = sc.nextLine();
+
 
         System.out.println("===========================================");
 
         System.out.println("========= Do you need insurance? =========");
+
+        System.out.print("Do you need insurance?");
+
+        System.out.println("Do you need insurance?");
         input = sc.next();
 
         switch(input){
