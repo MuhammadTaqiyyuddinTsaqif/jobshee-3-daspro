@@ -66,6 +66,9 @@ public class sistemekspedisi {
         
         LocalTime currentTime = LocalTime.now();
 
+        System.out.println("===========================================");
+        
+
         // Get the current date
         LocalDate currentDate = LocalDate.now();
         System.out.println("Current Date    : " + currentDate);
