@@ -5,7 +5,7 @@ import java.time.Month;
 import java.util.Scanner;
 
 public class sistemekspedisi {
-    public static void main(String[] args) {
+      public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
         String nama_penerima, no_telp_penerima, alamat_penerima, nama_pengirim, no_telp_pengirim, alamat_pengirim, asal_kota_pengiriman, kota_tujuan_pengiriman, input;
@@ -35,6 +35,8 @@ public class sistemekspedisi {
         System.out.println();
         System.out.println("===========================================");
         System.out.println();
+
+
 
         System.out.print("Apakah Anda memiliki member card? (ya/tidak): ");
         String memilikiMemberCard = sc.nextLine();
@@ -76,10 +78,10 @@ public class sistemekspedisi {
             // Misalnya, biaya pengiriman adalah Rp5000 per kilogram
             biayaPaket[i] = 5000 * beratPaket[i];
         }
-           System.out.println();
+        System.out.println();
            System.out.println("==========================================="); 
            System.out.println();
-
+        System.out.println("nama pengirim :" + nama_penerima);
         // Menampilkan informasi paket
         System.out.println("\nInformasi Paket:");
 
@@ -114,5 +116,24 @@ public class sistemekspedisi {
         int currentYear = currentDate.getYear();
         System.out.println("Year            : " + currentYear);
     
+        System.out.println("                _                              _ _     _ ");
+        System.out.println("               | |                            | (_)   (_)");
+        System.out.println("  _ ____      | |    _____  ___ __   ___  _| | ___ _ ");
+        System.out.println(" | '_\\ \\ /\\ / / __|  / _ \\ \\/ / ' \\ / _ \\/ _` | / __| |");
+        System.out.println(" | |   \\ V  V /| |_  |  _/>  <| |_) |  __/ (_| | \\_ \\ |");
+        System.out.println(" |_|    \\_/\\_/  \\__|  \\___/_/\\_\\ .__/ \\___|\\__,_|_|___/_");
+        System.out.println("                               | |                       ");
+        System.out.println("                               |_|                       ");
+        
+        System.out.println("------------------------------------------");
+        System.out.print("pengirim \t:" );
+        System.out.println("penerima \t:" + nama_penerima);
+        System.out.println("berat \t:kg");
+        System.out.println("asuransi");
+        System.out.println("diskon");
+        System.out.println("biaya asurasi");
+        System.out.println("jumlah kiriman");
+        System.out.println("total harga" );
+        System.out.println("------------------------------------------");
+        }
     }
-}
