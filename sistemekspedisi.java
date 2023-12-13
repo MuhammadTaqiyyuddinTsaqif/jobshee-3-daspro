@@ -5,66 +5,99 @@ import java.time.Month;
 import java.util.Scanner;
 
 public class sistemekspedisi {
-    public static void main(String[] args) {
+      public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
-        String nama_penerima, alamat_penerima, no_telp_penerima, nama_pengirim, alamat_pengirim, no_telp_pengirim, asal_kota_pengiriman, kota_tujuan_pengiriman, input;
+        String nama_penerima, no_telp_penerima, alamat_penerima, nama_pengirim, no_telp_pengirim, alamat_pengirim, asal_kota_pengiriman, kota_tujuan_pengiriman, input;
         double harga, panjang, berat, tinggi, lebar, jarak;
-
-        boolean asuransi , member, cod, reguler, expres;         
+        boolean asuransi , member, cod, reguler, expres;
 
         System.out.println("======= WELCOME TO RUWET EXPEDITION =======");
 
-        System.out.print("input nama pengirim          : ");
+        System.out.println("Lengkapi data berikut dengan benar!");
+        System.out.print("Nama pengirim          : ");
         nama_penerima = sc.nextLine();
-        System.out.print("input alamat pengirim        : ");
+        System.out.print("Alamat pengirim        : ");
         alamat_pengirim = sc.nextLine();
-        System.out.print("input no telp pengirim       : ");
-        no_telp_pengirim = sc.nextLine();
-        System.out.print("input asal kota pengiriman   : ");
+        System.out.print("Asal kota pengiriman   : ");
         asal_kota_pengiriman = sc.nextLine();
-        System.out.print("input nama penerima          : ");
+        System.out.print("No. telp pengirim      : ");
+        no_telp_pengirim = sc.nextLine();
+        System.out.print("Nama penerima          : ");
         nama_penerima = sc.nextLine();
-        System.out.print("input alamat penerima        : ");
+        System.out.print("Alamat penerima        : ");
         alamat_penerima = sc.nextLine();
-        System.out.print("input no telp penerima       : ");
-        no_telp_penerima = sc.nextLine();
-        System.out.print("input kota tujuan pengiriman : ");
+        System.out.print("Kota tujuan pengiriman : ");
         kota_tujuan_pengiriman = sc.nextLine();
+        System.out.print("No. telp penerima      : ");
+        no_telp_penerima = sc.nextLine();
 
-
+        System.out.println();
         System.out.println("===========================================");
+        System.out.println();
 
-        System.out.println("========= Do you need insurance? =========");
 
-        System.out.print("Do you need insurance?");
 
-        System.out.println("Do you need insurance?");
-        input = sc.next();
+        System.out.print("Apakah Anda memiliki member card? (ya/tidak): ");
+        String memilikiMemberCard = sc.nextLine();
 
-        switch(input){
-            case "yes":
-                System.out.println("Insurance will be processed immediately");
-                break;
-            default:
-                System.out.println("You don't use insurance");
+        if (memilikiMemberCard.equalsIgnoreCase("ya")) {
+            // Jika memiliki member card
+            System.out.println("Selamat! Estimasi pengiriman paket kurang dari 3 hari.");
+            // Lakukan operasi atau tindakan lainnya untuk anggota dengan kartu
+        } else if (memilikiMemberCard.equalsIgnoreCase("tidak")) {
+            // Jika tidak memiliki member card
+            System.out.println("Maaf, Estimasi pengiriman paket lebih dari 3 hari.");
+            // Lakukan operasi atau tindakan lainnya untuk non-anggota kartu
+        } else {
+            // Jika jawaban tidak valid
+            System.out.println("Masukkan jawaban yang valid (ya/tidak).");
         }
+        System.out.println();
+        System.out.println("==========================================="); 
+        System.out.println();
 
-        System.out.println("===========================================");
+        // Menentukan jumlah paket
+        System.out.print("Masukkan jumlah paket: ");
+        int jumlahPaket = sc.nextInt();
 
-        System.out.println("======= Do you have a member card? =======");
-        input = sc.next();
+        // Inisialisasi array untuk menyimpan informasi paket
+        String[] tujuanPaket = new String[jumlahPaket];
+        double[] beratPaket = new double[jumlahPaket];
+        double[] biayaPaket = new double[jumlahPaket];
 
-        switch(input){
-            case "yes":
-                System.out.println("You get a shipping fee discount of 10.000");
-                break;
-            default:
-                System.out.println("You do not get a discount on shipping costs");
-                
+        // Memasukkan informasi paket
+        for (int i = 0; i < jumlahPaket; i++) {
+            System.out.println("\nMasukkan informasi paket ke-" + (i + 1));
+            System.out.print("Kota tujuan paket: ");
+            tujuanPaket[i] = sc.next();
+
+            System.out.print("Berat paket (kg): ");
+            beratPaket[i] = sc.nextDouble();
+
+            // Misalnya, biaya pengiriman adalah Rp5000 per kilogram
+            biayaPaket[i] = 5000 * beratPaket[i];
+        }
+        System.out.println();
+           System.out.println("==========================================="); 
+           System.out.println();
+        System.out.println("nama pengirim :" + nama_penerima);
+        // Menampilkan informasi paket
+        System.out.println("\nInformasi Paket:");
+
+        for (int i = 0; i < jumlahPaket; i++) {
+            System.out.println("Paket ke-" + (i + 1));
+            System.out.println("Tujuan: " + tujuanPaket[i]);
+            System.out.println("Berat: " + beratPaket[i] + " kg");
+            System.out.println("Biaya: Rp" + biayaPaket[i]);
+            System.out.println("---------------------------");
+        }
+        sc.close();
+
+        LocalTime currentTime = LocalTime.now();
+
         System.out.println("===========================================");
         
-        LocalTime currentTime = LocalTime.now();
 
         // Get the current date
         LocalDate currentDate = LocalDate.now();
@@ -86,7 +119,24 @@ public class sistemekspedisi {
         int currentYear = currentDate.getYear();
         System.out.println("Year            : " + currentYear);
     
+        System.out.println("                _                              _ _     _ ");
+        System.out.println("               | |                            | (_)   (_)");
+        System.out.println("  _ ____      | |    _____  ___ __   ___  _| | ___ _ ");
+        System.out.println(" | '_\\ \\ /\\ / / __|  / _ \\ \\/ / ' \\ / _ \\/ _` | / __| |");
+        System.out.println(" | |   \\ V  V /| |_  |  _/>  <| |_) |  __/ (_| | \\_ \\ |");
+        System.out.println(" |_|    \\_/\\_/  \\__|  \\___/_/\\_\\ .__/ \\___|\\__,_|_|___/_");
+        System.out.println("                               | |                       ");
+        System.out.println("                               |_|                       ");
+        
+        System.out.println("------------------------------------------");
+        System.out.print("pengirim \t:" );
+        System.out.println("penerima \t:" + nama_penerima);
+        System.out.println("berat \t:kg");
+        System.out.println("asuransi");
+        System.out.println("diskon");
+        System.out.println("biaya asurasi");
+        System.out.println("jumlah kiriman");
+        System.out.println("total harga" );
+        System.out.println("------------------------------------------");
         }
-
-}
-}
+    }
